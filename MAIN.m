@@ -2,10 +2,7 @@
 % For maximization problems, multiply objective function by -1.
  
 % Settings of simulated binary crossover (SBX) in this code is Pc = 1, 
-% and probability of variable sawpping = 0. 
- 
-% For suggestions please contact: Bingshui Da (Email: da0002ui@e.ntu.edu.sg)
- 
+% and probability of variable sawpping = 0.  
 %% Calling the solvers
 % For large population sizes, consider using the Parallel Computing Toolbox
 % of MATLAB.
@@ -18,7 +15,7 @@ gen=500; % generation count 1000
 selection_pressure = 'elitist'; % choose either 'elitist' or 'roulette wheel'
 p_il = 0; % probability of individual learning (BFGA quasi-Newton Algorithm) --> Indiviudal Learning is an IMPORTANT component of the MFEA.
 rmp=0; % random mating probability
-reps=2; % repetitions 20
+reps=20; % repetitions 20
 
 dataMean = [];
 dataMeanFull = [];
@@ -101,7 +98,5 @@ for EA =1:1    %1=DE 2=GA
 %     end
 end
 
-save('result_DE_50_35DE.mat','data_SOO');
-% save('dataStd.mat','dataStd');gg
- 
-% save('result.mat','data_MFDE', 'data_SOO_1', 'data_SOO_2');
+
+% save('result.mat','data_MFDE');
